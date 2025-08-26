@@ -1,0 +1,71 @@
+{
+  "add": {
+    "type": "object",
+    "properties": {
+      "a": {
+        "type": "number",
+        "description": "first number"
+      },
+      "b": {
+        "type": "number", 
+        "description": "second number"
+      }
+    },
+    "required": ["a", "b"]
+  },
+
+
+  "multiply": {
+    "type": "object",
+    "properties": {
+      "a": {
+        "type": "number",
+        "description": "first number"
+      },
+      "b": {
+        "type": "number",
+        "description": "second number"
+      }
+    },
+    "required": ["a", "b"]
+  },
+
+
+  "compare": {
+    "type": "object",
+    "properties": {
+      "a": {
+        "type": "number",
+        "description": "first number to compare"
+      },
+      "b": {
+        "type": "number",
+        "description": "second number to compare"
+      }
+    },
+    "required": ["a", "b"]
+  },
+
+
+
+  "weather":{
+    "type": "object",
+    "properties": {
+        "key":{
+            "type":"string",
+            "description":"Request service authority identifier"
+        },
+      "city": {
+        "type": "string",
+        "description": "acroding to cityname and run city2code function ,you will get city code, 例如 北京市，深圳市，东城区"
+      },
+      "extensions":{
+       "type":"string",
+       "description":"Meteorological type",
+       "enum":["base","all"],
+       "default":"base"
+      }
+    },
+    "required":["city"]
+  }
+}
