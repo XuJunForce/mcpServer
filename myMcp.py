@@ -1,31 +1,33 @@
 import asyncio
 import os
 import json
+import argparse
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from mcp.client.session import ClientSession
 from mcp.client.streamable_http import streamablehttp_client
+import traceback #异常处理
 
 
 load_dotenv()
 mcp_server_url = os.getenv("MCP_SERVER_URL")
 
-# question = [
-#     "Does 9.9 is larger than 9.11,please use the MCP funciton compare to get the result"
-# ]
-question = [
-    "现在深圳市天气怎么样"
-]
+# 通过用户-q --questions 读取问题
+question = []
 
+DEFAULT_QUESTION = ["现在深圳的天气怎么样？"]
 
 class MCPAgent():
     def __init__(self, openai_client, mcp_session=None):
         self.openai_client = openai_client
         self.mcp_session = mcp_session
         self.available_tools = []
-        self.mcp_available = mcp_session is not None
 
 
+
+    @property
+    def mcp_available(self):
+        return self.mcp_session is not None
 
 
 
@@ -286,27 +288,55 @@ async def main():
         await process_questions(agent)
 
 
+
+
+
 async def process_questions(agent):
-    """处理用户问题的通用函数"""
     for query in question:
         print("\n" + "="*60)
-        print(f"用户提问: {query}")
+        print(f"用户提问:{query}")
         print("="*60)
-        
+
         try:
             response = await agent.chat_with_tools(query)
-            
             print("\n" + "-"*60)
             print(f"LLM回答: {response}")
-            print("-"*60)
+            print("-"*60)        
+            
         except Exception as e:
-            print(f"处理问题时出错: {e}")
-            import traceback
+            print(f"处理问题出错{e}")
             traceback.print_exc()
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        description="MCP Agent - 智能助手"
+    )
+    parser.add_argument(
+        "-q", "--question",
+        type=str,
+        help="要询问的问题",
+        metavar="问题内容"
+    )
+    return parser.parse_args()
+
+
+
+
+
 
 
 
 if __name__ == "__main__":
+    
+    #解析用户提出的问题
+    args = parse_arguments()
+
+    if args.question:
+        question = [args.question]
+        print(f"--------------启动 MCP Agent (命令行问题模式)----------------")
+        print(f"问题: {args.question}")   
+
+
     print("--------------启动 MCP Agent----------------")
     asyncio.run(main())
 

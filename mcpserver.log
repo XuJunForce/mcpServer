@@ -1,8 +1,620 @@
-nohup: ignoring input
-INFO:     Started server process [5813]
+2025-09-06 22:05:54,622 - server.py - INFO - ==================================================
+2025-09-06 22:05:54,622 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:05:54,622 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:05:54,622 - server.py - INFO - ==================================================
+2025-09-06 22:05:54,661 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:05:54,661 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:05:54,661 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:05:54,662 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
 INFO:     Waiting for application startup.
-[08/22/25 01:06:21] INFO     StreamableHTTP       streamable_http_manager.py:110
-                             session manager                                    
-                             started                                            
+2025-09-06 22:05:54,749 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57940 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:06:02,027 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57956 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 22:06:02,034 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57960 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:06:02,038 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:06:02,040 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57966 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:06:03,011 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 22:06:03,265 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 22:06:03,459 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:07:30,612 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/server.py
+2025-09-06 22:07:30,693 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:07:31,381 - server.py - INFO - ==================================================
+2025-09-06 22:07:31,382 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:07:31,382 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:07:31,382 - server.py - INFO - ==================================================
+2025-09-06 22:07:31,417 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:07:31,417 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:07:31,417 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:07:31,417 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+2025-09-06 22:07:31,502 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:45580 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:05,370 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:45588 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 22:08:05,376 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:45596 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:05,381 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:08:05,382 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:45602 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:06,873 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 22:08:06,873 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 22:08:06,873 - server.py - ERROR - 访问API出现错误:name 'base_url' is not defined
+2025-09-06 22:08:06,875 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:43864 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:45,997 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:43876 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 22:08:46,004 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:43888 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:46,010 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:08:46,011 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:43902 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:08:47,030 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 22:08:47,031 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 22:08:47,031 - server.py - ERROR - 访问API出现错误:name 'base_url' is not defined
+2025-09-06 22:08:47,032 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:09:06,545 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/server.py
+2025-09-06 22:09:07,452 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:09:08,136 - server.py - INFO - ==================================================
+2025-09-06 22:09:08,136 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:09:08,136 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:09:08,136 - server.py - INFO - ==================================================
+2025-09-06 22:09:08,173 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:09:08,173 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:09:08,173 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:09:08,173 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+2025-09-06 22:09:08,260 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35008 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:09:27,573 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:35012 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 22:09:27,580 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:35016 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:09:27,585 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:09:27,586 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:35028 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 22:09:28,559 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 22:09:28,735 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 22:09:28,843 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:09:49,200 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/server.py
+2025-09-06 22:09:50,200 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:09:50,873 - server.py - INFO - ==================================================
+2025-09-06 22:09:50,874 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:09:50,874 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:09:50,874 - server.py - INFO - ==================================================
+2025-09-06 22:09:50,911 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:09:50,911 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:09:50,911 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:09:50,911 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+2025-09-06 22:09:50,996 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+2025-09-06 22:12:42,209 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:12:42,956 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:12:43,873 - server.py - INFO - ==================================================
+2025-09-06 22:12:43,874 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:12:43,874 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:12:43,874 - server.py - INFO - ==================================================
+2025-09-06 22:12:43,943 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:12:43,943 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:12:43,943 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:12:43,943 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+2025-09-06 22:12:44,029 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+2025-09-06 22:20:55,610 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/.venv_new/lib/python3.9/site-packages/pkg_resources/__init__.py
+2025-09-06 22:20:56,010 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:20:56,011 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:21:01,011 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:21:01,012 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:21:01,012 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:21:06,633 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/.venv_new/lib/python3.9/site-packages/typing_extensions.py
+2025-09-06 22:21:07,013 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:21:07,013 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:21:12,013 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:21:12,016 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:21:12,017 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:23:10,144 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/simple_chat_server.py
+2025-09-06 22:23:11,030 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:23:11,030 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:23:16,030 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:23:16,031 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:23:16,031 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:23:26,340 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:23:27,033 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:23:27,033 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:23:32,034 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:23:32,034 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:23:32,035 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:24:02,451 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/simple_chat_server.py
+2025-09-06 22:24:03,038 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:24:03,039 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:24:08,039 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:24:08,039 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:24:08,040 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:28:15,004 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:28:15,064 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:28:15,064 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:28:20,064 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:28:20,065 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:28:20,065 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:29:09,246 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/start_chat.py
+2025-09-06 22:29:10,070 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:29:10,071 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:29:15,071 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:29:15,071 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:29:15,072 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:30:33,165 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/start_chat.py
+2025-09-06 22:30:34,080 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:30:34,080 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:30:39,080 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:30:39,081 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:30:39,081 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:33:32,410 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/simple_chat_server.py
+2025-09-06 22:33:33,099 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:33:33,099 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:33:38,099 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:33:38,100 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:33:38,100 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:36:03,168 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/test_server.py
+2025-09-06 22:36:04,114 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:36:04,114 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:36:09,115 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:36:09,115 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:36:09,115 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:38:29,006 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:38:29,129 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:38:29,129 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:38:34,130 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:38:34,130 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:38:34,131 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:43:19,333 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:43:20,158 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:43:20,158 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:43:25,159 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:43:25,159 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:43:25,159 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:48:00,170 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:48:00,184 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:48:00,185 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:48:05,185 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:48:05,185 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:48:05,185 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:49:19,937 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/test_chat.py
+2025-09-06 22:49:20,193 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:49:20,193 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:49:24,622 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/test_chat.py
+2025-09-06 22:49:25,193 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:49:25,194 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:49:25,194 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+2025-09-06 22:49:25,195 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:49:25,196 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:49:30,196 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:49:30,196 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:49:30,197 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:50:37,612 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:50:38,204 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:50:38,204 - server.py - ERROR - 服务器运行错误: [Errno 2] No such file or directory
+2025-09-06 22:50:43,205 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:50:43,205 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:50:43,205 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [11132]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/starlette/routing.py", line 694, in lifespan
+  File "/root/.local/share/uv/python/cpython-3.12.11-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/python_learn/mcpServer/.venv/lib/python3.12/site-packages/mcp/server/streamable_http_manager.py", line 101, in run
+RuntimeError: StreamableHTTPSessionManager .run() can only be called once per instance. Create a new instance if you need to run again.
+
+ERROR:    Application startup failed. Exiting.
+2025-09-06 22:53:23,871 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/.venv/bin/activate_this.py
+2025-09-06 22:53:24,221 - server.py - INFO - 检测到文件变化，正在重启服务器...
+Traceback (most recent call last):
+  File "/root/python_learn/mcpServer/server.py", line 1, in <module>
+    from mcp.server.fastmcp import FastMCP
+ModuleNotFoundError: No module named 'mcp'
+2025-09-06 22:55:51,100 - server.py - INFO - ==================================================
+2025-09-06 22:55:51,101 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:55:51,101 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:55:51,101 - server.py - INFO - ==================================================
+2025-09-06 22:55:51,140 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:55:51,140 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:55:51,140 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:55:51,140 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:55:51,242 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:57:32,542 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:57:32,550 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:57:32,555 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:57:32,556 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:58:14,305 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:58:15,210 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:58:16,273 - server.py - INFO - ==================================================
+2025-09-06 22:58:16,273 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:58:16,273 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:58:16,274 - server.py - INFO - ==================================================
+2025-09-06 22:58:16,365 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:58:16,365 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:58:16,366 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:58:16,366 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:58:16,538 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:58:28,618 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:58:29,390 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:58:30,287 - server.py - INFO - ==================================================
+2025-09-06 22:58:30,287 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:58:30,287 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:58:30,287 - server.py - INFO - ==================================================
+2025-09-06 22:58:30,321 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:58:30,321 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:58:30,321 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:58:30,322 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:58:30,415 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:58:38,526 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:58:39,344 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:58:40,134 - server.py - INFO - ==================================================
+2025-09-06 22:58:40,134 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:58:40,134 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:58:40,135 - server.py - INFO - ==================================================
+2025-09-06 22:58:40,172 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:58:40,172 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:58:40,172 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:58:40,172 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:58:40,256 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:58:54,154 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 22:58:54,199 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:58:54,972 - server.py - INFO - ==================================================
+2025-09-06 22:58:54,972 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:58:54,972 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:58:54,972 - server.py - INFO - ==================================================
+2025-09-06 22:58:55,008 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:58:55,008 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:58:55,008 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:58:55,008 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:58:55,091 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:59:04,345 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:04,351 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:04,356 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:59:04,358 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:10,811 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/check_env.py
+2025-09-06 22:59:11,034 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:59:12,315 - server.py - INFO - ==================================================
+2025-09-06 22:59:12,315 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:59:12,315 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:59:12,315 - server.py - INFO - ==================================================
+2025-09-06 22:59:12,405 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:59:12,411 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:59:12,411 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:59:12,411 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:59:12,505 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:59:16,525 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/check_env.py
+2025-09-06 22:59:17,423 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:59:18,161 - server.py - INFO - ==================================================
+2025-09-06 22:59:18,161 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:59:18,161 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:59:18,161 - server.py - INFO - ==================================================
+2025-09-06 22:59:18,201 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:59:18,201 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:59:18,201 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:59:18,201 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:59:18,322 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 22:59:34,713 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:34,720 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:34,725 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 22:59:34,726 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 22:59:49,606 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/check_env.py
+2025-09-06 22:59:50,232 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 22:59:51,111 - server.py - INFO - ==================================================
+2025-09-06 22:59:51,112 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 22:59:51,112 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 22:59:51,112 - server.py - INFO - ==================================================
+2025-09-06 22:59:51,154 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 22:59:51,154 - server.py - INFO - 启动MCP服务器...
+2025-09-06 22:59:51,154 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 22:59:51,155 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 22:59:51,261 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:00:06,961 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/check_env.py
+2025-09-06 23:00:07,234 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:00:08,383 - server.py - INFO - ==================================================
+2025-09-06 23:00:08,383 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:00:08,383 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:00:08,384 - server.py - INFO - ==================================================
+2025-09-06 23:00:08,518 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:00:08,519 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:00:08,519 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:00:08,519 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:00:08,643 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:00:18,990 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:00:19,529 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:00:20,268 - server.py - INFO - ==================================================
+2025-09-06 23:00:20,269 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:00:20,269 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:00:20,269 - server.py - INFO - ==================================================
+2025-09-06 23:00:20,314 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:00:20,314 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:00:20,314 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:00:20,314 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:00:20,408 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:00:30,090 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:00:30,347 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:00:31,083 - server.py - INFO - ==================================================
+2025-09-06 23:00:31,083 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:00:31,083 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:00:31,084 - server.py - INFO - ==================================================
+2025-09-06 23:00:31,147 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:00:31,147 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:00:31,147 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:00:31,147 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:00:31,218 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:00:40,159 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:00:41,155 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:00:42,084 - server.py - INFO - ==================================================
+2025-09-06 23:00:42,084 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:00:42,084 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:00:42,084 - server.py - INFO - ==================================================
+2025-09-06 23:00:42,131 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:00:42,131 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:00:42,131 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:00:42,131 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:00:42,169 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:00:54,290 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:00:55,152 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:00:56,080 - server.py - INFO - ==================================================
+2025-09-06 23:00:56,080 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:00:56,080 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:00:56,080 - server.py - INFO - ==================================================
+2025-09-06 23:00:56,129 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:00:56,129 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:00:56,129 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:00:56,129 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:00:56,256 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:01:09,196 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:01:10,160 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:01:10,980 - server.py - INFO - ==================================================
+2025-09-06 23:01:10,981 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:01:10,981 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:01:10,981 - server.py - INFO - ==================================================
+2025-09-06 23:01:11,035 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:01:11,035 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:01:11,035 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:01:11,035 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:01:11,190 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:01:29,607 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/debug_server.py
+2025-09-06 23:01:30,062 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:01:31,671 - server.py - INFO - ==================================================
+2025-09-06 23:01:31,671 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:01:31,671 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:01:31,672 - server.py - INFO - ==================================================
+2025-09-06 23:01:31,805 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:01:31,806 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:01:31,806 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:01:31,806 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:01:31,876 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:01:36,752 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/debug_server.py
+2025-09-06 23:01:36,812 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:01:37,546 - server.py - INFO - ==================================================
+2025-09-06 23:01:37,546 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:01:37,546 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:01:37,546 - server.py - INFO - ==================================================
+2025-09-06 23:01:37,599 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:01:37,599 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:01:37,599 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:01:37,599 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:01:37,690 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:02:18,751 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:18,761 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:18,778 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:02:18,784 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:22,077 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:02:22,629 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:02:23,548 - server.py - INFO - ==================================================
+2025-09-06 23:02:23,548 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:02:23,549 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:02:23,549 - server.py - INFO - ==================================================
+2025-09-06 23:02:23,625 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:02:23,625 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:02:23,625 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:02:23,625 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:02:23,741 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:02:30,434 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:30,441 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:30,447 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:02:30,448 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:02:31,739 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:02:32,438 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:02:32,556 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:03:25,018 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:03:25,654 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:03:26,521 - server.py - INFO - ==================================================
+2025-09-06 23:03:26,521 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:03:26,522 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:03:26,522 - server.py - INFO - ==================================================
+2025-09-06 23:03:26,583 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:03:26,584 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:03:26,584 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:03:26,584 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:03:26,735 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:03:41,583 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:03:41,590 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:03:41,595 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:03:41,596 - mcp.server.streamable_http - INFO - Terminating session: None

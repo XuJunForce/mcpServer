@@ -1,0 +1,24 @@
+# Systemd 服务文件模板
+# 使用方法:
+# 1. 复制此文件到 /etc/systemd/system/mcpserver.service
+# 2. 修改路径和用户信息
+# 3. 运行: sudo systemctl enable mcpserver && sudo systemctl start mcpserver
+
+[Unit]
+Description=MCP Server with Hot Reload
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/python_learn/mcpServer
+Environment=PATH=/usr/bin:/usr/local/bin
+ExecStart=/usr/bin/python3 /root/python_learn/mcpServer/server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mcpserver
+
+[Install]
+WantedBy=multi-user.target

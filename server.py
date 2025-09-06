@@ -4,55 +4,57 @@ from tools.city2code import adcode
 from dotenv import load_dotenv
 import os
 import json
+import logging
 
-mcp = FastMCP("calculator", stateless_http=True, port=8001)
+from reload import run_server_with_reload
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('mcpserver.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("server.py")
+
+mcp = FastMCP("McpServer", stateless_http=True, port=8001)
 load_dotenv()
 
-@mcp.tool()
-def add(a: int, b: int) -> str:
-    """sum two numbers"""
-    return f"{a} + {b} is {a+b}"
+# 全局变量现在在reload.py中定义
 
-@mcp.tool()
-def multiply(a:int, b:int) -> int:
-    return a*b
 
-@mcp.tool()
-def compare(a:float, b:float)->str:
-    """
-    compare two numbers
-    """
-    if a > b:
-        return f"{a}is bigger than {b}"
-    else:
-        return f"{b}is bigger than {a}"
 
 #目前只编写了实时天气获取
 @mcp.tool()
 def weather(city:str, extensions:str="base", output:str="JSON")->str:
-    result = []
-    """
+    '''
     获取天气信息
-    
+
     Args:
         city: 城市编码 adcode格式(必填)
         extensions: 气象类型,可选值:base/all(可选,默认base)
         output: 返回格式,可选值:JSON/XML(可选,默认JSON)
-    
+
     Returns:
         str: 天气信息或错误信息
-    """
+
+'''
+    result = []
     base_url = "https://restapi.amap.com/v3/weather/weatherInfo"
     code = adcode(city)
     params = {
+        
         "key": os.getenv("KEY"),
         "city": code,
         "extensions": extensions,
         "output": output
     }
 
+    
     #调试
-    print(f"正在获取天气数据--------")
+    logger.info(f"正在获取天气数据--------")
     
     try:
         #尝试访问API
@@ -64,15 +66,14 @@ def weather(city:str, extensions:str="base", output:str="JSON")->str:
                 weather_data = api_response.get("lives")
                 return json.dumps(weather_data,ensure_ascii=False)
     except Exception as e:
-        print(f"访问API出现错误:{e}")
+        logger.error(f"访问API出现错误:{e}")
 
-    
-
-
-
-
-    
     
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    logger.info("="*50)
+    logger.info("MCP 服务器启动中...")
+    logger.info("支持热重载和后台运行")
+    logger.info("="*50)
+    
+    run_server_with_reload()

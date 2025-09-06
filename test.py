@@ -1,44 +1,23 @@
-import os,json,requests
-from tools.city2code import adcode 
-from dotenv import load_dotenv
+from pydantic.type_adapter import P
 
-load_dotenv()
 
-def weather(city:str, extensions:str="base", output:str="JSON")->str:
-    result = []
-    """
-    获取天气信息
+class Test():
+    def __init__(self, nums:int = 0):
+        self.nums: int = nums
     
-    Args:
-        city: 城市编码 adcode格式(必填)
-        extensions: 气象类型,可选值:base/all(可选,默认base)
-        output: 返回格式,可选值:JSON/XML(可选,默认JSON)
-    
-    Returns:
-        str: 天气信息或错误信息
-    """
-    base_url = "https://restapi.amap.com/v3/weather/weatherInfo"
-    code = adcode(city)
-    params = {
-        "key": os.getenv("KEY"),
-        "city": code,
-        "extensions": extensions,
-        "output": output
-    }
+    @property 
+    def available(self) -> bool:
+        return self.nums !=0
 
-    #调试
-    print(f"正在获取天气数据--------")
-    try:
-        #尝试访问API
-        response = requests.get(base_url, params=params, timeout=10) 
-        if response.status_code ==200:
-            api_response = response.json()
-            #检查API响应情况
-            if api_response.get("status") == "1":
-                weather_data = api_response.get("lives")
-                return json.dumps(weather_data,ensure_ascii=False)
-    except Exception as e:
-        print(f"访问API出现错误:{e}")
+t = Test(10)
+print(t.available)
 
-if __name__ == "__main__":
-    print(weather("北京市"))
+print("---更新---")
+
+print(t.available)
+
+t.nums = 0 
+if t.available:
+    print("错误更新")
+else:
+    print("正确：nums为0，不可用") 

@@ -1,0 +1,12 @@
+# MCP Server Dependencies
+mcp
+fastapi
+uvicorn
+requests
+python-dotenv
+watchdog
+openpyxl
+pandas
+openai
+pydantic
+aiohttp
