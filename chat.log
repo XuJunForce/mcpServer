@@ -1,0 +1,63 @@
+INFO:__main__:启动MCP聊天服务器...
+INFO:__main__:访问 http://localhost:8002 开始聊天
+INFO:     Will watch for changes in these directories: ['/root/python_learn/mcpServer']
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     Started reloader process [81201] using StatReload
+INFO:     Started server process [81222]
+INFO:     Waiting for application startup.
+INFO:chat_server:✅ OpenAI客户端初始化成功
+INFO:chat_server:🔗 MCP服务器URL: http://localhost:8001/mcp
+INFO:     Application startup complete.
+INFO:     124.126.137.241:10074 - "GET / HTTP/1.1" 200 OK
+INFO:     124.126.137.241:10074 - "GET /static/css/chat.css HTTP/1.1" 304 Not Modified
+INFO:     124.126.137.241:10076 - "GET /static/js/chat.js HTTP/1.1" 304 Not Modified
+INFO:     163.125.234.120:9860 - "GET / HTTP/1.1" 200 OK
+INFO:     163.125.234.120:9860 - "GET /static/css/chat.css HTTP/1.1" 200 OK
+INFO:     163.125.234.120:9859 - "GET /static/js/chat.js HTTP/1.1" 200 OK
+INFO:     163.125.234.120:9859 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     124.126.137.241:10096 - "POST /chat/stream HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:mcp.client.streamable_http:Negotiated protocol version: 2025-06-18
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     124.126.137.241:10140 - "POST /chat/stream HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:mcp.client.streamable_http:Negotiated protocol version: 2025-06-18
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     163.125.234.120:9943 - "POST /chat/stream HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:mcp.client.streamable_http:Negotiated protocol version: 2025-06-18
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://localhost:8001/mcp "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.chatanywhere.tech/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:  StatReload detected changes in 'tools/city2code.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:chat_server:🔄 应用关闭中...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81222]
+INFO:     Started server process [81406]
+INFO:     Waiting for application startup.
+INFO:chat_server:✅ OpenAI客户端初始化成功
+INFO:chat_server:🔗 MCP服务器URL: http://localhost:8001/mcp
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'chat_server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:chat_server:🔄 应用关闭中...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81406]
+INFO:     Started server process [81417]
+INFO:     Waiting for application startup.
+INFO:chat_server:✅ OpenAI客户端初始化成功
+INFO:chat_server:🔗 MCP服务器URL: http://localhost:8001/mcp
+INFO:     Application startup complete.

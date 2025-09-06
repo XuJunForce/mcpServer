@@ -1,0 +1,64 @@
+2025-09-06 23:51:02,714 - server.py - INFO - ==================================================
+2025-09-06 23:51:02,714 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:51:02,714 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:51:02,714 - server.py - INFO - ==================================================
+2025-09-06 23:51:02,749 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:51:02,749 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:51:02,749 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:51:02,749 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [77125]
+INFO:     Waiting for application startup.
+2025-09-06 23:51:02,823 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57072 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:34,206 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57080 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 23:54:34,212 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57096 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:34,220 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:34,222 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:57106 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:35,399 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:35,596 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:35,702 - mcp.server.streamable_http - INFO - Terminating session: None
+execel_path : /root/python_learn/mcpServer/AMap_adcode_citycode.xlsx
+未找到对应的城市，默认返回深圳市天气
+INFO:     127.0.0.1:58718 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:43,701 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58734 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 23:54:43,707 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58738 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:43,713 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:43,714 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58752 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:44,735 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:44,804 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:44,922 - mcp.server.streamable_http - INFO - Terminating session: None
+execel_path : /root/python_learn/mcpServer/AMap_adcode_citycode.xlsx
+INFO:     127.0.0.1:58754 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:48,108 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58762 - "POST /mcp HTTP/1.1" 202 Accepted
+2025-09-06 23:54:48,121 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58764 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:48,130 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:48,131 - mcp.server.streamable_http - INFO - Terminating session: None
+INFO:     127.0.0.1:58768 - "POST /mcp HTTP/1.1" 200 OK
+2025-09-06 23:54:48,968 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:49,038 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:49,137 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:55:49,136 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/tools/city2code.py
+2025-09-06 23:55:49,799 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:55:50,673 - server.py - INFO - ==================================================
+2025-09-06 23:55:50,673 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:55:50,673 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:55:50,673 - server.py - INFO - ==================================================
+2025-09-06 23:55:50,709 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:55:50,709 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:55:50,709 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:55:50,709 - server.py - INFO - 按 Ctrl+C 停止服务器
+INFO:     Started server process [77125]
+INFO:     Waiting for application startup.
+2025-09-06 23:55:50,838 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)

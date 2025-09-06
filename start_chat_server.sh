@@ -27,9 +27,6 @@ if [ ! -f ".env" ]; then
     echo ""
 fi
 
-# 安装依赖
-echo "检查并安装依赖包..."
-pip3 install -r requirements.txt
 
 echo ""
 echo "启动MCP聊天服务器..."
@@ -38,4 +35,5 @@ echo "按 Ctrl+C 停止服务器"
 echo ""
 
 # 启动服务器
-python3 chat_server.py
+nohup python3 chat_server.py > chat.log 2>&1 &
+echo "日志文件存放于chat.log"

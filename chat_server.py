@@ -3,8 +3,9 @@ import json
 import os
 from typing import AsyncGenerator
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import StreamingResponse, HTMLResponse
+from fastapi.responses import StreamingResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
+from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
@@ -21,12 +22,15 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-app = FastAPI(title="MCP聊天助手", description="支持工具调用的流式聊天界面")
+# 全局变量
+openai_client = None
 
-@app.on_event("startup")
-async def startup_event():
-    """应用启动时的初始化"""
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """应用生命周期管理"""
     global openai_client
+    
+    # 启动时初始化
     try:
         openai_client = AsyncOpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
@@ -49,14 +53,24 @@ async def startup_event():
     except Exception as e:
         logger.error(f"❌ 初始化失败: {e}")
         raise e
+    
+    yield  # 应用运行
+    
+    # 关闭时清理（如果需要）
+    logger.info("🔄 应用关闭中...")
+
+app = FastAPI(
+    title="MCP聊天助手", 
+    description="支持工具调用的流式聊天界面",
+    lifespan=lifespan
+)
+
+# 挂载静态文件
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # 请求模型
 class ChatRequest(BaseModel):
     message: str
-
-# 全局变量
-openai_client = None
-mcp_agent = None
 
 async def init_mcp_agent():
     """初始化MCP Agent"""
@@ -431,465 +445,10 @@ async def chat_stream(request: ChatRequest):
         logger.error(f"聊天流处理错误: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/")
 async def get_chat_page():
     """返回聊天页面"""
-    return """
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCP智能聊天助手</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .chat-container {
-            width: 90%;
-            max-width: 800px;
-            height: 90vh;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .chat-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-
-        .message {
-            margin-bottom: 15px;
-            max-width: 80%;
-        }
-
-        .message.user {
-            margin-left: auto;
-            text-align: right;
-        }
-
-        .message.assistant {
-            margin-right: auto;
-        }
-
-        .message-content {
-            padding: 12px 16px;
-            border-radius: 18px;
-            display: inline-block;
-            max-width: 100%;
-            word-wrap: break-word;
-        }
-
-        .message.user .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .message.assistant .message-content {
-            background: white;
-            color: #333;
-            border: 1px solid #e0e0e0;
-        }
-
-        .tool-call {
-            background: #e3f2fd;
-            border: 1px solid #2196f3;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: monospace;
-            font-size: 0.9rem;
-        }
-
-        .tool-call-header {
-            font-weight: bold;
-            color: #1976d2;
-            margin-bottom: 5px;
-        }
-
-        .tool-result {
-            background: #e8f5e8;
-            border: 1px solid #4caf50;
-            border-radius: 8px;
-            padding: 8px;
-            margin: 5px 0;
-            font-size: 0.85rem;
-        }
-
-        .tool-error {
-            background: #ffebee;
-            border: 1px solid #f44336;
-            border-radius: 8px;
-            padding: 8px;
-            margin: 5px 0;
-            color: #c62828;
-            font-size: 0.85rem;
-        }
-
-        .status-message {
-            background: #fff3e0;
-            border: 1px solid #ff9800;
-            border-radius: 8px;
-            padding: 8px;
-            margin: 5px 0;
-            color: #f57c00;
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .chat-input-container {
-            padding: 20px;
-            background: white;
-            border-top: 1px solid #e0e0e0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .chat-input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 25px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .chat-input:focus {
-            border-color: #667eea;
-        }
-
-        .send-button {
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-
-        .send-button:hover {
-            transform: translateY(-1px);
-        }
-
-        .send-button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .typing-indicator {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 10px 16px;
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 18px;
-            margin-bottom: 15px;
-        }
-
-        .typing-dot {
-            width: 8px;
-            height: 8px;
-            background: #999;
-            border-radius: 50%;
-            animation: typing 1.4s infinite ease-in-out;
-        }
-
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-
-        @keyframes typing {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-10px); }
-        }
-
-        .chat-messages::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .chat-messages::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 3px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: #c1c1c1;
-            border-radius: 3px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb:hover {
-            background: #a1a1a1;
-        }
-    </style>
-</head>
-<body>
-    <div class="chat-container">
-        <div class="chat-header">
-            🤖 MCP智能聊天助手
-        </div>
-        
-        <div class="chat-messages" id="chatMessages">
-            <div class="message assistant">
-                <div class="message-content">
-                    你好！我是MCP智能助手，可以帮你查询天气等实时信息。请问有什么可以帮助你的吗？
-                </div>
-            </div>
-        </div>
-        
-        <div class="chat-input-container">
-            <input type="text" class="chat-input" id="chatInput" placeholder="请输入您的问题..." />
-            <button class="send-button" id="sendButton">发送</button>
-        </div>
-    </div>
-
-    <script>
-        const chatMessages = document.getElementById('chatMessages');
-        const chatInput = document.getElementById('chatInput');
-        const sendButton = document.getElementById('sendButton');
-        
-        let isGenerating = false;
-        let currentAssistantMessage = null;
-
-        function scrollToBottom() {
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function addUserMessage(message) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message user';
-            messageDiv.innerHTML = `<div class="message-content">${escapeHtml(message)}</div>`;
-            chatMessages.appendChild(messageDiv);
-            scrollToBottom();
-        }
-
-        function addAssistantMessage() {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message assistant';
-            messageDiv.innerHTML = '<div class="message-content"></div>';
-            chatMessages.appendChild(messageDiv);
-            currentAssistantMessage = messageDiv.querySelector('.message-content');
-            scrollToBottom();
-            return currentAssistantMessage;
-        }
-
-        function addTypingIndicator() {
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'typing-indicator';
-            typingDiv.innerHTML = `
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <span>AI正在思考...</span>
-            `;
-            chatMessages.appendChild(typingDiv);
-            scrollToBottom();
-            return typingDiv;
-        }
-
-        function addToolCall(tools) {
-            const toolDiv = document.createElement('div');
-            toolDiv.className = 'tool-call';
-            
-            let toolsHtml = '<div class="tool-call-header">🛠️ 调用工具:</div>';
-            tools.forEach(tool => {
-                toolsHtml += `
-                    <div><strong>${tool.name}</strong></div>
-                    <div>参数: ${JSON.stringify(tool.arguments, null, 2)}</div>
-                `;
-            });
-            
-            toolDiv.innerHTML = toolsHtml;
-            chatMessages.appendChild(toolDiv);
-            scrollToBottom();
-        }
-
-        function addToolResult(toolName, result) {
-            const resultDiv = document.createElement('div');
-            resultDiv.className = 'tool-result';
-            resultDiv.innerHTML = `<strong>工具 ${toolName} 执行结果:</strong><br/>${escapeHtml(result)}`;
-            chatMessages.appendChild(resultDiv);
-            scrollToBottom();
-        }
-
-        function addToolError(toolName, error) {
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'tool-error';
-            errorDiv.innerHTML = `<strong>工具 ${toolName} 执行失败:</strong><br/>${escapeHtml(error)}`;
-            chatMessages.appendChild(errorDiv);
-            scrollToBottom();
-        }
-
-        function addStatusMessage(message) {
-            const statusDiv = document.createElement('div');
-            statusDiv.className = 'status-message';
-            statusDiv.textContent = message;
-            chatMessages.appendChild(statusDiv);
-            scrollToBottom();
-            return statusDiv;
-        }
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-
-        async function sendMessage() {
-            if (isGenerating) return;
-            
-            const message = chatInput.value.trim();
-            if (!message) return;
-
-            // 添加用户消息
-            addUserMessage(message);
-            chatInput.value = '';
-            
-            // 禁用输入
-            isGenerating = true;
-            sendButton.disabled = true;
-            chatInput.disabled = true;
-
-            // 添加打字指示器
-            const typingIndicator = addTypingIndicator();
-
-            try {
-                const response = await fetch('/chat/stream', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ message: message })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                // 移除打字指示器
-                typingIndicator.remove();
-
-                // 创建助手消息容器
-                const assistantContent = addAssistantMessage();
-
-                const reader = response.body.getReader();
-                const decoder = new TextDecoder();
-
-                while (true) {
-                    const { value, done } = await reader.read();
-                    if (done) break;
-
-                    const chunk = decoder.decode(value);
-                    const lines = chunk.split('\\n');
-
-                    for (const line of lines) {
-                        if (line.trim()) {
-                            try {
-                                const data = JSON.parse(line);
-                                
-                                switch (data.type) {
-                                    case 'start':
-                                        addStatusMessage(data.message);
-                                        break;
-                                    case 'tool_calls':
-                                        addToolCall(data.tools);
-                                        break;
-                                    case 'tool_executing':
-                                        addStatusMessage(data.message);
-                                        break;
-                                    case 'tool_result':
-                                        addToolResult(data.tool_name, data.result);
-                                        break;
-                                    case 'tool_error':
-                                        addToolError(data.tool_name, data.error);
-                                        break;
-                                    case 'generating':
-                                        addStatusMessage(data.message);
-                                        break;
-                                    case 'content':
-                                        assistantContent.textContent += data.content;
-                                        scrollToBottom();
-                                        break;
-                                    case 'end':
-                                        // 移除所有状态消息
-                                        document.querySelectorAll('.status-message').forEach(el => el.remove());
-                                        break;
-                                    case 'error':
-                                        assistantContent.textContent = '❌ ' + data.error;
-                                        break;
-                                }
-                            } catch (e) {
-                                console.error('解析JSON失败:', e, '原始数据:', line);
-                            }
-                        }
-                    }
-                }
-
-            } catch (error) {
-                // 移除打字指示器
-                if (typingIndicator && typingIndicator.parentNode) {
-                    typingIndicator.remove();
-                }
-                
-                const errorContent = addAssistantMessage();
-                errorContent.textContent = `❌ 连接错误: ${error.message}`;
-            } finally {
-                // 重新启用输入
-                isGenerating = false;
-                sendButton.disabled = false;
-                chatInput.disabled = false;
-                chatInput.focus();
-            }
-        }
-
-        // 事件监听
-        sendButton.addEventListener('click', sendMessage);
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                sendMessage();
-            }
-        });
-
-        // 页面加载完成后聚焦输入框
-        window.addEventListener('load', () => {
-            chatInput.focus();
-        });
-    </script>
-</body>
-</html>
-    """
+    return FileResponse("templates/chat.html")
 
 @app.get("/health")
 async def health_check():

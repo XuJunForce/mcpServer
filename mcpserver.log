@@ -618,3 +618,250 @@ ModuleNotFoundError: No module named 'mcp'
 2025-09-06 23:03:41,590 - mcp.server.streamable_http - INFO - Terminating session: None
 2025-09-06 23:03:41,595 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
 2025-09-06 23:03:41,596 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:10,085 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:10,090 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:10,094 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:14:10,095 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:11,168 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:14:11,343 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:14:11,454 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:20,858 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:20,863 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:20,867 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:14:20,868 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:14:21,754 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:14:21,863 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:14:21,968 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:19:11,885 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:19:12,796 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:19:13,966 - server.py - INFO - ==================================================
+2025-09-06 23:19:13,966 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:19:13,966 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:19:13,966 - server.py - INFO - ==================================================
+2025-09-06 23:19:14,049 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:19:14,049 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:19:14,049 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:19:14,050 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:19:14,118 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:19:22,491 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:19:23,056 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:19:23,776 - server.py - INFO - ==================================================
+2025-09-06 23:19:23,776 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:19:23,776 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:19:23,776 - server.py - INFO - ==================================================
+2025-09-06 23:19:23,848 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:19:23,850 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:19:23,850 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:19:23,856 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:19:23,926 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:20:29,976 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:20:30,875 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:20:31,577 - server.py - INFO - ==================================================
+2025-09-06 23:20:31,577 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:20:31,577 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:20:31,577 - server.py - INFO - ==================================================
+2025-09-06 23:20:31,638 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:20:31,638 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:20:31,638 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:20:31,638 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:20:31,721 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:23:14,874 - server.py - INFO - ==================================================
+2025-09-06 23:23:14,874 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:23:14,875 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:23:14,875 - server.py - INFO - ==================================================
+2025-09-06 23:23:14,954 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:23:14,954 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:23:14,954 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:23:14,954 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:23:15,042 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:23:15,043 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2025-09-06 23:23:15,947 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:23:16,697 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:23:17,482 - server.py - INFO - ==================================================
+2025-09-06 23:23:17,483 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:23:17,483 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:23:17,483 - server.py - INFO - ==================================================
+2025-09-06 23:23:17,556 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:23:17,556 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:23:17,557 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:23:17,557 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:23:17,633 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:23:54,091 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:23:54,098 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:23:54,105 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:23:54,106 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:24:22,552 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:24:22,557 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:24:22,562 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:24:22,563 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:25:29,877 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:25:29,883 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:25:29,888 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:25:29,889 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:27:08,216 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:08,217 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:08,595 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:08,997 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:09,521 - server.py - INFO - ==================================================
+2025-09-06 23:27:09,521 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:09,521 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:09,521 - server.py - INFO - ==================================================
+2025-09-06 23:27:09,635 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:09,635 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:09,635 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:09,635 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:09,750 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:09,763 - server.py - INFO - ==================================================
+2025-09-06 23:27:09,763 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:09,763 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:09,763 - server.py - INFO - ==================================================
+2025-09-06 23:27:09,866 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:09,875 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:09,876 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:09,876 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:09,942 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:09,943 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2025-09-06 23:27:24,293 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:24,293 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:24,666 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:24,883 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:25,432 - server.py - INFO - ==================================================
+2025-09-06 23:27:25,433 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:25,433 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:25,433 - server.py - INFO - ==================================================
+2025-09-06 23:27:25,540 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:25,549 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:25,550 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:25,550 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:25,632 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:25,672 - server.py - INFO - ==================================================
+2025-09-06 23:27:25,673 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:25,673 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:25,673 - server.py - INFO - ==================================================
+2025-09-06 23:27:25,764 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:25,764 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:25,770 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:25,775 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:25,852 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:25,853 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2025-09-06 23:27:34,997 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:34,997 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:27:35,557 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:35,792 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:27:36,320 - server.py - INFO - ==================================================
+2025-09-06 23:27:36,320 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:36,320 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:36,320 - server.py - INFO - ==================================================
+2025-09-06 23:27:36,406 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:36,406 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:36,406 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:36,406 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:36,516 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:36,558 - server.py - INFO - ==================================================
+2025-09-06 23:27:36,558 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:27:36,558 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:27:36,558 - server.py - INFO - ==================================================
+2025-09-06 23:27:36,655 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:27:36,655 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:27:36,656 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:27:36,656 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:27:36,744 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:27:36,745 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2025-09-06 23:28:32,236 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:28:32,236 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:28:32,435 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:28:32,687 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:28:33,254 - server.py - INFO - ==================================================
+2025-09-06 23:28:33,254 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:28:33,254 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:28:33,254 - server.py - INFO - ==================================================
+2025-09-06 23:28:33,366 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:28:33,373 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:28:33,374 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:28:33,374 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:28:33,445 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:28:33,467 - server.py - INFO - ==================================================
+2025-09-06 23:28:33,467 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:28:33,467 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:28:33,467 - server.py - INFO - ==================================================
+2025-09-06 23:28:33,553 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:28:33,553 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:28:33,553 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:28:33,553 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:28:33,645 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:28:33,646 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2025-09-06 23:29:10,745 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:10,753 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:10,758 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:29:10,760 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:12,987 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:29:13,253 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:29:13,358 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:23,163 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:23,168 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:29:23,173 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:29:23,174 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:30:16,929 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:30:16,929 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/chat_server.py
+2025-09-06 23:30:17,390 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:30:17,581 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:30:18,170 - server.py - INFO - ==================================================
+2025-09-06 23:30:18,171 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:30:18,171 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:30:18,171 - server.py - INFO - ==================================================
+2025-09-06 23:30:18,341 - server.py - INFO - ==================================================
+2025-09-06 23:30:18,341 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:30:18,341 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:30:18,342 - server.py - INFO - ==================================================
+2025-09-06 23:48:03,249 - server.py - INFO - ==================================================
+2025-09-06 23:48:03,249 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:48:03,249 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:48:03,249 - server.py - INFO - ==================================================
+2025-09-06 23:48:03,298 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:48:03,298 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:48:03,298 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:48:03,298 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:48:03,393 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:48:10,104 - server.py - INFO - 接收到信号 2，准备关闭服务器...
+2025-09-06 23:48:10,109 - server.py - INFO - 服务器已停止
+2025-09-06 23:51:02,714 - server.py - INFO - ==================================================
+2025-09-06 23:51:02,714 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:51:02,714 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:51:02,714 - server.py - INFO - ==================================================
+2025-09-06 23:51:02,749 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:51:02,749 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:51:02,749 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:51:02,749 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:51:02,823 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2025-09-06 23:54:34,206 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:34,212 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:34,220 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:34,222 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:35,399 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:35,596 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:35,702 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:43,701 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:43,707 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:43,713 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:43,714 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:44,735 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:44,804 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:44,922 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:48,108 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:48,121 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:48,130 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-06 23:54:48,131 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:54:48,968 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-06 23:54:49,038 - server.py - INFO - 正在获取天气数据--------
+2025-09-06 23:54:49,137 - mcp.server.streamable_http - INFO - Terminating session: None
+2025-09-06 23:55:49,136 - server.py - INFO - 检测到文件变化: /root/python_learn/mcpServer/tools/city2code.py
+2025-09-06 23:55:49,799 - server.py - INFO - 检测到文件变化，正在重启服务器...
+2025-09-06 23:55:50,673 - server.py - INFO - ==================================================
+2025-09-06 23:55:50,673 - server.py - INFO - MCP 服务器启动中...
+2025-09-06 23:55:50,673 - server.py - INFO - 支持热重载和后台运行
+2025-09-06 23:55:50,673 - server.py - INFO - ==================================================
+2025-09-06 23:55:50,709 - server.py - INFO - 文件监控器已启动，监控路径: /root/python_learn/mcpServer
+2025-09-06 23:55:50,709 - server.py - INFO - 启动MCP服务器...
+2025-09-06 23:55:50,709 - server.py - INFO - 服务器运行在端口 8001
+2025-09-06 23:55:50,709 - server.py - INFO - 按 Ctrl+C 停止服务器
+2025-09-06 23:55:50,838 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
